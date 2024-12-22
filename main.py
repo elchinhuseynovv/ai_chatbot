@@ -1,5 +1,10 @@
+"""Entry point for the chatbot application"""
+import asyncio
 from src.chatbot import Chatbot
 
-if __name__ == "__main__":
+async def main():
     chatbot = Chatbot()
-    chatbot.run()
+    await chatbot.run()
+
+if __name__ == "__main__":
+    asyncio.run(main())
